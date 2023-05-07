@@ -1,0 +1,19 @@
+.disabled-link {
+    pointer-events: none;
+   
+  }
+  .carousel-control-prev, .carousel-control-next {
+    font-size: 8rem; /* adjust the font size as needed */
+    width: 6rem; /* adjust the width as needed */
+    height: 3rem; /* adjust the height as needed */
+    opacity: 1; /* adjust the opacity as needed */
+    margin-top:150px ;
+    background-color: transparent;
+    border: none;
+  }
+  .carousel-item {
+    height: 400px;
+  }
+  
+  
+  
