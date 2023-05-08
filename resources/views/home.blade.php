@@ -63,7 +63,10 @@
   <x-child name="Habibullah khan" age='21' img='child1.jpg'/>
   <x-child name="Sam Khan" age='20' img='child2.jpg'/>
   <x-child name="Naymar khan" age='19' img='child3.jpg'/>
-  
+  <x-child name="Habibullah khan" age='21' img='child1.jpg'/>
+  <x-child name="Sam Khan" age='20' img='child2.jpg'/>
+  <x-child name="Naymar khan" age='19' img='child3.jpg'/>
+    
 
 
 @endsection
