@@ -6,7 +6,7 @@
 <title> Home Page    </title>  
 @endpush
 @section('main')
-<nav class="navbar navbar-expand-lg  navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg  navbar-light bg-dark fixed-top">
     <a class="navbar-brand text-light mr-3  disabled-link"  href="">Home</a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
@@ -59,14 +59,32 @@
       <span class="visually-hidden"></span>
     </button>
   </div>
-  
-  <x-child name="Habibullah khan" age='21' img='child1.jpg'/>
-  <x-child name="Sam Khan" age='20' img='child2.jpg'/>
-  <x-child name="Naymar khan" age='19' img='child3.jpg'/>
-  <x-child name="Habibullah khan" age='21' img='child1.jpg'/>
-  <x-child name="Sam Khan" age='20' img='child2.jpg'/>
-  <x-child name="Naymar khan" age='19' img='child3.jpg'/>
     
+   <h1 class="justify-content-center text-danger mt-4 text-center font-weight-bold">Saving Lives Of Children!</h1>
+  <div class='cont'>
+    <x-child name="Habibullah khan" age='21' img='child4.jpeg' gender='Male' missingTime='12-03-2002' />
+    <x-child name="Habibullah khan" age='21' img='child5.jpeg' gender='Male' missingTime='12-03-2002' />
+
+    <x-child name="Habibullah khan" age='21' img='child6.jpeg' gender='Male' missingTime='12-03-2002' />
+
+    <x-child name="Habibullah khan" age='21' img='child7.jpeg' gender='Male' missingTime='12-03-2002' />
+    <x-child name="Habibullah khan" age='21' img='child6.jpeg' gender='Male' missingTime='12-03-2002' />
+    <x-child name="Habibullah khan" age='21' img='child7.jpeg' gender='Male' missingTime='12-03-2002' />
+
+    <x-child name="Habibullah khan" age='21' img='child5.jpeg' gender='Male' missingTime='12-03-2002' />
+
+    <x-child name="Habibullah khan" age='21' img='child6.jpeg' gender='Male' missingTime='12-03-2002' />
+
+    <x-child name="Habibullah khan" age='21' img='child4.jpeg' gender='Male' missingTime='12-03-2002' />
+    <x-child name="Habibullah khan" age='21' img='child5.jpeg' gender='Male' missingTime='12-03-2002' />
+
+    <x-child name="Habibullah khan" age='21' img='child4.jpeg' gender='Male' missingTime='12-03-2002' />
+
+    <x-child name="Habibullah khan" age='21' img='child7.jpeg' gender='Male' missingTime='12-03-2002' />
+
+  
+
+</div>  
 
 
 @endsection
