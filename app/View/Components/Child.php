@@ -14,11 +14,15 @@ class Child extends Component
     public $name;
     public $age;
     public $img;
-    public function __construct($name,$age,$img)
+    public $gender;
+    public $missingTime;
+    public function __construct($name,$age,$img,$gender,$missingTime)
     {
         $this->name=$name;
         $this->age=$age;
         $this->img=$img;
+        $this->gender=$gender;
+        $this->missingTime=$missingTime;
     }
 
     /**

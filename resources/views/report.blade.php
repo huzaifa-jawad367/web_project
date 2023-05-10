@@ -1,6 +1,26 @@
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<form class="container" action="{{url('/')}}/report" method="POST"  enctype="multipart/form-data">
+@extends('layouts.main')
+@push('title')
+<title>Report Found child</title>  
+@endpush
+@section('main')
+
+<nav class="navbar navbar-expand-lg   navbar-light bg-dark fixed-top">
+    <a class="navbar-brand text-light  "  href="{{url('/')}}">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+          </svg>
+        Go to Home</a>
+  <span style="font-size: 20px" class="mx-auto  text-light "><p >Report Found Child</p></span>
+  </nav>
+
+
+
+
+
+{{-- For reporting found children --}}
+
+<form  class="container pt-5" action="{{url('/')}}/report" method="POST"  enctype="multipart/form-data">
     @csrf
      
    
@@ -109,8 +129,9 @@
     </div>
    
     <div class="form-group">
-        <button class="mt-4 form-control form-control-lg bg-primary" type="submit" class="btn btn-primary">Submit</button>
+        <button class="mt-4 text-light col-4 mx-auto form-control form-control-lg bg-dark" type="submit" class="btn btn-primary">Submit</button>
     </div>
 
     
 </form>
+@endsection
