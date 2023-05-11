@@ -27,7 +27,7 @@
           <a class="nav-link text-light mr-3" href="{{url('/')}}/report">Report Found child</a>
         </li>
       </ul>
-      <form method="POST" class="form-inline my-2 w-50">
+      <form method="GET" action="{{url('/')}}/search" class="form-inline my-2 w-50">
         <input id="search" name="search" class="form-control mr-sm-2 w-50 " type="search" placeholder="Search" value="{{old('search')}}" aria-label="Search">
         <select class="form-control w-auto select2 mr-sm-2" name="select" id="select">
             <option value="1">Lost child</option>
