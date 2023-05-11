@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\volunteer;
 use App\Http\Controllers\child;
 use App\Http\Controllers\report;
+use App\Http\Controllers\search;
+use App\Http\Controllers\profilef;
+use App\Http\Controllers\profilel;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +31,10 @@ Route::post('/registerc', [child::class,'register']);
 
 Route::get('/report', [report::class,'index']);
 Route::post('/report', [report::class,'register']);
+
+
+Route::get('/search', [search::class,'index']);
+
+Route::get('/profilef', [profilef::class,'index']);
+
+Route::get('/profilel', [profilel::class,'index']);
