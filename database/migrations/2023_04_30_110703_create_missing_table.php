@@ -12,7 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('missing', function (Blueprint $table) {
-            $table->id();
+            $table->id('ID');
+            $table->string('missing_type');
+            $table->string('name');
+            $table->tinyInteger('age')->unsigned();
+            $table->string('gender', 1);
+            $table->date('date_of_birth');
+            $table->string('birth_address');
+            $table->string('missing_address');
+            $table->date('missing_time');
+            $table->tinyInteger('height_when_missing');
+            $table->enum('blood_type', ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']);
+            $table->string('feature_description');
+            $table->string('family_information');
+            $table->string('additional_instructions');
+            $table->string('other_info');
             $table->timestamps();
         });
     }
