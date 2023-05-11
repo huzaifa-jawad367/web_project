@@ -21,7 +21,7 @@
 <div class="container-fluid">
 
 
-    
+    <x-profilef />
 </div>
 
 
