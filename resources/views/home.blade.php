@@ -15,10 +15,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
-          <a class="nav-link text-light mr-3" href="#">Sign up</a>
+          <a class="nav-link text-light mr-3" href="{{url('/')}}/signup">Sign up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light mr-3" href="#">Log in</a>
+          <a class="nav-link text-light mr-3" href="{{url('/')}}/login">Log in</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-light mr-3" href="{{url('/')}}/registerc">Report Lost Child</a>
