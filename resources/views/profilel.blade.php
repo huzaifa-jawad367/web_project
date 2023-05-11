@@ -16,8 +16,8 @@
 
 <div class="container-fluid">
 
+<x-profilel  />
 
-    
 </div>
 
 
