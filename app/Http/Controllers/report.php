@@ -43,8 +43,19 @@ class report extends Controller
    $report->memory=$req['memory'];
    $report->other_info=$req['other_info'];
    $report->save();
+//    Get the uploaded data id
+   $id = $report->report_id;
+ 
+ 
 
-  print_r($req->all());
+
+$file = $req->file('image');
+$extension = $file->getClientOriginalExtension();
+
+// // Store the file with a custom name
+$file->storeAs('public/found', "$id.$extension");
+return view("submitted");
+ 
   
 
     }

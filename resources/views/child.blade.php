@@ -90,6 +90,18 @@
         @enderror
     </div>
 
+
+    <div class="mt-4 form-group">
+        <label for="missing_time">Missing since</label>
+        <input type="date" class="form-control" id="missing_time" name="missing_time" value="{{ old('missing_time') }}"
+            required>
+        @error('missing_time')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+    </div>
+
+
+
     <div class="mt-4 form-group">
         <label for="height">Height (Centimenters)</label>
         <input type="number" min=0 max=210 class="form-control" id="height" name="height" value="{{ old('height') }}" required>
@@ -126,9 +138,9 @@
     </div>
 
     <div class="mt-4 form-group">
-        <label for="family_info">Family Information</label>
-        <textarea class="form-control" style="resize: none" id="family_info" name="family_info" rows="5" required>{{ old('family_info') }}</textarea>
-        @error('family_info')
+        <label for="family_information">Family Information</label>
+        <textarea class="form-control" style="resize: none" id="family_information" name="family_information" rows="5" required>{{ old('family_information') }}</textarea>
+        @error('family_information')
             <span class="text-danger">{{ $message }}</span>
         @enderror
     </div>

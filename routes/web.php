@@ -46,3 +46,7 @@ Route::get('/login', function() {
 Route::get('/signup', function() {
     return view('signup');
 });
+
+Route::get('/submitted', function() {
+    return view('submitted');
+});

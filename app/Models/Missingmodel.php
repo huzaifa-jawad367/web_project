@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reportmodel extends Model
+class Missingmodel extends Model
 {
     use HasFactory;
     use HasFactory;
-    protected $table='report';
-    protected $primaryKey='report_id';
+    protected $table='missing';
+    protected $primaryKey='missing_id';
 }
   ?>
