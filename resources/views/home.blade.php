@@ -67,10 +67,18 @@
    <h1 class="justify-content-center text-danger mt-4 text-center font-weight-bold">Saving Lives Of Children!</h1>
    <h2 class="col-md-12 mt-5 text-center">Lost Children</h2>
    <div class='cont-fluid'>
-   
+   @php
+       $count=0;
+   @endphp
     @foreach ($missing as $i)
     <x-search id="{{$i['missing_id']}}" name="{{$i['name']}}" age="{{$i['age']}}" gender="{{$i['gender']}}"  image="{{url('/')}}/storage/lost/{{$i['missing_id']}}.{{$i['image']}}" dob="{{$i['date_of_birth']}}" type=1 />
-    
+     @php
+         $count++;
+         if ($count==10) {
+          break;
+         }
+     @endphp
+
     @endforeach
   
 </div>  
@@ -78,9 +86,15 @@
 <h2 class="col-md-12 mt-5 text-center">Found Children</h2>
 <div class='cont-fluid'>
   
+  ph
   @foreach ($found as $i)
   <x-search id="{{$i['report_id']}}"  name="{{$i['name']}}" age="{{$i['age']}}" gender="{{$i['gender']}}"  image="{{url('/')}}/storage/found/{{$i['report_id']}}.{{$i['image']}}" dob="{{$i['date_of_birth']}}" type=2 />
- 
+  @php
+  $count++;
+  if ($count==10) {
+   break;
+  }
+@endphp
   @endforeach
   
 </div> 
