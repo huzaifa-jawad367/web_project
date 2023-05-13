@@ -21,7 +21,10 @@
 <div class="container-fluid">
 
 
-    <x-profilef />
+  <x-profilef id="{{$user['report_id']}}" name="{{$user['name']}}" age="{{$user['age']}}"  gender="{{$user['gender']}}"  dob="{{$user['date_of_birth']}}" address="{{$user['address']}}" addressFound="{{$user['address_found']}}"
+  appearance="{{$user['appearance']}}" height="{{$user['height']}}" memory="{{$user['memory']}}"
+   otherInfo="{{$user['other_info']}}" image="{{$user['image']}}"
+  />
 </div>
 
 

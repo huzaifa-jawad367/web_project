@@ -30,6 +30,10 @@ class child extends Controller
     
     ]);
 
+    $file = $req->file('image');
+    $extension = $file->getClientOriginalExtension();
+    
+
     $report=new Missingmodel;
     $report->missing_type=$req['missingtype'];
     $report->name=$req['name'];
@@ -43,6 +47,7 @@ class child extends Controller
     $report->blood_type=$req['blood'];
     $report->appearance=$req['appearance'];
     $report->family_information=$req['family_information'];
+    $report->image=$extension;
     
     $report->save();
  //    Get the uploaded data id
@@ -51,9 +56,7 @@ class child extends Controller
   
  
  
- $file = $req->file('image');
- $extension = $file->getClientOriginalExtension();
- 
+
  // // Store the file with a custom name
  $file->storeAs('public/lost', "$id.$extension");
  return view("submitted");

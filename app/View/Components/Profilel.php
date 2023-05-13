@@ -11,9 +11,49 @@ class Profilel extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $id;
+     public $name;
+     public $age;
+     public $gender;
+     public $height;
+     public $dob;
+     public $blood;
+
+     public $type;
+
+     public $missing;
+
+     public $birthAddress;
+     public $missingAddress;
+
+     public $appearance;
+
+     public $family;
+
+     public $image;
+
+
+
+
+    public function __construct($id,$name,$age,$gender,$height,$dob,$blood,$type,$missing,$birthAddress,$missingAddress,$appearance,$family,$image)
     {
-        //
+     $this->id = $id;   
+     $this->name=$name;
+     $this->age=$age;
+     $this->gender=$gender;
+     $this->height=$height;
+     $this->dob=$dob;
+     $this->blood=$blood;
+     $this->type=$type;
+     $this->missing=$missing;
+     $this->birthAddress=$birthAddress;
+     $this->missingAddress=$missingAddress;
+     $this->appearance=$appearance;
+     $this->family=$family;
+     $this->image = $image;   
+
+
+
     }
 
     /**

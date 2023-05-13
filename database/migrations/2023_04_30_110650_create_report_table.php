@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('height');
             $table->text('memory');
             $table->text('other_info');
+            $table->string('image');
             
             $table->timestamps();
         });

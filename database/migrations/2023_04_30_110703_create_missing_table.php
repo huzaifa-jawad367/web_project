@@ -25,6 +25,7 @@ return new class extends Migration
             $table->enum('blood_type', ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']);
             $table->string('appearance');
             $table->string('family_information');
+            $table->string('image');
             $table->timestamps();
         });
     }

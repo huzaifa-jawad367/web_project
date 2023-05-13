@@ -16,7 +16,12 @@
 
 <div class="container-fluid">
 
-<x-profilel  />
+<x-profilel id="{{$user['missing_id']}}" name="{{$user['name']}}" age="{{$user['age']}}"  gender="{{$user['gender']}}" height="{{$user['height_when_missing']}}" dob="{{$user['date_of_birth']}}" blood="{{$user['blood_type']}}" type="{{$user['missing_type']}}" missing="{{$user['missing_time']}}" 
+birthAddress="{{$user['birth_address']}}" missingAddress="{{$user['missing_address']}}" appearance="{{$user['appearance']}}" family="{{$user['family_information']}}"
+image="{{$user['image']}}"
+/>
+
+
 
 </div>
 

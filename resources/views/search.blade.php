@@ -28,10 +28,20 @@
   </div>
   <div class="container-fluid   pl-5" style="min-height: 57.5vh;">
    
-
-    <x-search name="Habibullah Khan" age=12 gender="Male"  id="child1.jpg" dob="12-02-2002" />
-    <x-search name="Habibullah Khan" age=12 gender="Male"  id="child1.jpg" dob="12-02-2002" />
-
+    @if ($type==1)
+    @foreach ($search as $i)
+    <x-search id="{{$i['missing_id']}}" name="{{$i['name']}}" age="{{$i['age']}}" gender="{{$i['gender']}}"  image="{{url('/')}}/storage/lost/{{$i['missing_id']}}.{{$i['image']}}" dob="{{$i['date_of_birth']}}" type={{$type}} />
+   
+    @endforeach
+    @endif
+    
+    @if ($type==2)
+    @foreach ($search as $i)
+    <x-search id="{{$i['report_id']}}"  name="{{$i['name']}}" age="{{$i['age']}}" gender="{{$i['gender']}}"  image="{{url('/')}}/storage/found/{{$i['report_id']}}.{{$i['image']}}" dob="{{$i['date_of_birth']}}" type={{$type}} />
+   
+    @endforeach
+    @endif
+        
 
 </div>
 

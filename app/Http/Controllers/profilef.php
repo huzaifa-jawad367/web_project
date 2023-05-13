@@ -9,9 +9,16 @@ class profilef extends Controller
 {
     
 
-    public function index(){
+    public function index(Request $req){
+
+
+        $user = Reportmodel::find($req['id']);
+        $user = compact('user'); 
+        // echo "<pre>";
+        // print_r($user);
+  
           
-        return view('profilef');
+        return view('profilef')->with($user);
         
     }
     
