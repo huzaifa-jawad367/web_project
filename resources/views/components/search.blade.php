@@ -1,8 +1,9 @@
-<div class="row justify-content-center mt-5 ">
-   
-        <img src="{{$image}}" class="col-md-3" alt="image">
-        <div class="col-md-2"></div>
-        <div class=" col-">
+<div class="ml-5 p-2 mt-5 row d-inline-block border ">
+<div class=" col-md-12  ">
+     <div class="row">
+        <img src="{{$image}}" class="col-md-6" alt="image">
+        
+        <div class=" col-md-6">
             <h3 class="">{{$name}}</h3>
             <p class="">Age :  &nbsp;&nbsp;   {{$age}}</p>
             <p class="">Gender : &nbsp;&nbsp;   {{$gender}}</p>
@@ -30,6 +31,7 @@
             
              
 
-
-             </div>
+        </div>
+             </div> 
+            </div>
     </div>            

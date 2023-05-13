@@ -65,30 +65,25 @@
   </div>
     
    <h1 class="justify-content-center text-danger mt-4 text-center font-weight-bold">Saving Lives Of Children!</h1>
-  <div class='cont'>
-    <x-child name="Habibullah khan" age='21' img='child4.jpeg' gender='Male' missingTime='12-03-2002' />
-    <x-child name="Habibullah khan" age='21' img='child5.jpeg' gender='Male' missingTime='12-03-2002' />
-
-    <x-child name="Habibullah khan" age='21' img='child6.jpeg' gender='Male' missingTime='12-03-2002' />
-
-    <x-child name="Habibullah khan" age='21' img='child7.jpeg' gender='Male' missingTime='12-03-2002' />
-    <x-child name="Habibullah khan" age='21' img='child6.jpeg' gender='Male' missingTime='12-03-2002' />
-    <x-child name="Habibullah khan" age='21' img='child7.jpeg' gender='Male' missingTime='12-03-2002' />
-
-    <x-child name="Habibullah khan" age='21' img='child5.jpeg' gender='Male' missingTime='12-03-2002' />
-
-    <x-child name="Habibullah khan" age='21' img='child6.jpeg' gender='Male' missingTime='12-03-2002' />
-
-    <x-child name="Habibullah khan" age='21' img='child4.jpeg' gender='Male' missingTime='12-03-2002' />
-    <x-child name="Habibullah khan" age='21' img='child5.jpeg' gender='Male' missingTime='12-03-2002' />
-
-    <x-child name="Habibullah khan" age='21' img='child4.jpeg' gender='Male' missingTime='12-03-2002' />
-
-    <x-child name="Habibullah khan" age='21' img='child7.jpeg' gender='Male' missingTime='12-03-2002' />
-
+   <h2 class="col-md-12 mt-5 text-center">Lost Children</h2>
+   <div class='cont-fluid'>
+   
+    @foreach ($missing as $i)
+    <x-search id="{{$i['missing_id']}}" name="{{$i['name']}}" age="{{$i['age']}}" gender="{{$i['gender']}}"  image="{{url('/')}}/storage/lost/{{$i['missing_id']}}.{{$i['image']}}" dob="{{$i['date_of_birth']}}" type=1 />
+    
+    @endforeach
   
-
 </div>  
+
+<h2 class="col-md-12 mt-5 text-center">Found Children</h2>
+<div class='cont-fluid'>
+  
+  @foreach ($found as $i)
+  <x-search id="{{$i['report_id']}}"  name="{{$i['name']}}" age="{{$i['age']}}" gender="{{$i['gender']}}"  image="{{url('/')}}/storage/found/{{$i['report_id']}}.{{$i['image']}}" dob="{{$i['date_of_birth']}}" type=2 />
+ 
+  @endforeach
+  
+</div> 
 
 
 @endsection

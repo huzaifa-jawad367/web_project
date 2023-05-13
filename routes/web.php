@@ -7,6 +7,7 @@ use App\Http\Controllers\report;
 use App\Http\Controllers\search;
 use App\Http\Controllers\profilef;
 use App\Http\Controllers\profilel;
+use App\Http\Controllers\home;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +19,7 @@ use App\Http\Controllers\profilel;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/',[home::class,'index'] );
 
 Route::get('/registerv', [volunteer::class,'index']);
 Route::post('/registerv', [volunteer::class,'register']);

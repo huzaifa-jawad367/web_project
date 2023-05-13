@@ -31,7 +31,7 @@
     @if ($type==1)
     @foreach ($search as $i)
     <x-search id="{{$i['missing_id']}}" name="{{$i['name']}}" age="{{$i['age']}}" gender="{{$i['gender']}}"  image="{{url('/')}}/storage/lost/{{$i['missing_id']}}.{{$i['image']}}" dob="{{$i['date_of_birth']}}" type={{$type}} />
-   
+     
     @endforeach
     @endif
     
