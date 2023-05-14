@@ -16,13 +16,16 @@ class Child extends Component
     public $img;
     public $gender;
     public $missingTime;
-    public function __construct($name,$age,$img,$gender,$missingTime)
+
+    public $type;
+    public function __construct($name,$age,$img,$gender,$missingTime,$type)
     {
         $this->name=$name;
         $this->age=$age;
         $this->img=$img;
         $this->gender=$gender;
         $this->missingTime=$missingTime;
+        $this->type=$type;
     }
 
     /**

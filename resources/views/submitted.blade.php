@@ -1,7 +1,7 @@
 
 @extends('layouts.main')
 @push('title')
-<title>Profile Page</title>  
+<title>Form Submitted</title>  
 @endpush
 @section('main')
 
@@ -13,20 +13,17 @@
         Go to Home</a>
  
 
- 
+
+   
   </nav>
 
+<div height=500px class="container-fluid  mt-5 pt-5 text-center">
+<div class="mt-5 pt-5"></div>
+<h2 class="text-success mt-5">Form Submitted Succesfully</h2>
+<a href="{{url('/')}}" class="button">Go to Homepage</a>
 
 
-<div class="container-fluid">
-
-
-  <x-profilef id="{{$user['report_id']}}" name="{{$user['name']}}" age="{{$user['age']}}"  gender="{{$user['gender']}}"  dob="{{$user['date_of_birth']}}" address="{{$user['address']}}" addressFound="{{$user['address_found']}}"
-  appearance="{{$user['appearance']}}" height="{{$user['height']}}" memory="{{$user['memory']}}"
-   otherInfo="{{$user['other_info']}}" image="{{$user['image']}}"
-  />
+<div class="mt-5 pt-5"></div>
 </div>
-
-
 
  @endsection 

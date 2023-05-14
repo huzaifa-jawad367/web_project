@@ -30,7 +30,9 @@ class report extends Controller
      'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',  
     
     ]);
-
+    $file = $req->file('image');
+    $extension = $file->getClientOriginalExtension();
+   
    $report=new Reportmodel;
    $report->name=$req['name'];
    $report->age=$req['age'];
@@ -42,9 +44,20 @@ class report extends Controller
    $report->height=$req['height'];
    $report->memory=$req['memory'];
    $report->other_info=$req['other_info'];
+   $report->image=$extension;
    $report->save();
+//    Get the uploaded data id
+   $id = $report->report_id;
+   $report = null;
+ 
+  
 
-  print_r($req->all());
+
+
+// // Store the file with a custom name
+$file->storeAs('public/found', "$id.$extension");
+return view("submitted");
+ 
   
 
     }

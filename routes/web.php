@@ -7,6 +7,7 @@ use App\Http\Controllers\report;
 use App\Http\Controllers\search;
 use App\Http\Controllers\profilef;
 use App\Http\Controllers\profilel;
+use App\Http\Controllers\home;
 use App\Http\Controllers\MyAuthentication;
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,7 @@ use App\Http\Controllers\MyAuthentication;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/',[home::class,'index'] );
 
 Route::get('/registerv', [volunteer::class,'index']);
 Route::post('/registerv', [volunteer::class,'register']);
@@ -44,3 +43,11 @@ Route::get('/login', [MyAuthentication::class, 'login']);
 Route::get('/registeration', [MyAuthentication::class, 'registeration']);
 
 Route::post('/register-user', [MyAuthentication::class, 'registerUser'])->name('register-user');
+
+Route::get('/signup', function() {
+    return view('signup');
+});
+
+Route::get('/submitted', function() {
+    return view('submitted');
+});

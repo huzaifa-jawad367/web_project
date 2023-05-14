@@ -14,20 +14,22 @@ class Search extends Component
     public $name;
     public $age;
     public $gender;
-    public $id;
+    public $image;
     public $dob;
+    public $type;
+
+    public $id;
 
 
-
-
-    public function __construct($name ,$age ,$gender ,$id,$dob)
+    public function __construct($id,$name ,$age ,$gender ,$image,$dob,$type)
     {
-        
+     $this->id=$id;   
      $this->name=$name;
      $this->age=$age;
      $this->gender=$gender;
-     $this->id=$id;
+     $this->image=$image;
      $this->dob=$dob;
+     $this->type=$type;
 
     }
 
