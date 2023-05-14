@@ -32,6 +32,7 @@ class MyAuthentication extends Controller
         $user->cnic = $request->cnic;
         $user->date_of_birth = $request->date_of_birth;
         $user->gender = $request->gender;
+        $user->phone_num = $request->phone;
         $res = $user->save();
         if ($res) {
             return back()->with('success', 'You have registered successfully');
