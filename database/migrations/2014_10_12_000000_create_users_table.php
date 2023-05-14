@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('salt')->unique();
             $table->string('password');
-            $table->string('gender');
+            $table->string('gender', 1);
             $table->date('date_of_birth');
             $table->string('address');
             $table->string('phone_num');

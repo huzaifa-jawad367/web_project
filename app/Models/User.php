@@ -19,8 +19,22 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'gender',
         'email',
         'password',
+        'cnic',
+        'date_of_birth',
+        'phone_num',
+    ];
+
+    /**
+     * The model's default attributes.
+     *
+     * @var array
+     */
+
+    protected $attributes = [
+        
     ];
 
     /**

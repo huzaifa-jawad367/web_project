@@ -7,6 +7,7 @@ use App\Http\Controllers\report;
 use App\Http\Controllers\search;
 use App\Http\Controllers\profilef;
 use App\Http\Controllers\profilel;
+use App\Http\Controllers\MyAuthentication;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,10 +40,7 @@ Route::get('/profilef', [profilef::class,'index']);
 
 Route::get('/profilel', [profilel::class,'index']);
 
-Route::get('/login', function() {
-    return view('login');
-});
+Route::get('/login', [MyAuthentication::class, 'login']);
+Route::get('/registeration', [MyAuthentication::class, 'registeration']);
 
-Route::get('/signup', function() {
-    return view('signup');
-});
+Route::post('/register-user', [MyAuthentication::class, 'registerUser'])->name('register-user');
