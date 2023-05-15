@@ -1,66 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Finding Kidnapped Children
 
-## About Laravel
+## About the problem
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Pakistan is the 5th most populous country in the world with a huge population of young people
+and children. However it also lacks the resources to provide security for these children, or a
+good environment for them to grow as a contributing member of society. There are many cases
+of missing children in Pakistan each year, and the state and society as a whole lacks the
+capability to even keep track of these cases, much less combat to reduce them. These cases
+can include both runaways and kidnapped children. Many of these cases can go unreported
+each year.
+According to a report by the non-governmental organization Sahil, 2,960 cases of missing
+children were reported in Pakistan in 2020. Of these, 1,659 were girls and 1,301 were boys.
+Some studies have attempted to estimate the extent of underreporting in missing children
+cases. For example, a study by the International Centre for Missing & Exploited Children (ICMEC)
+found that the number of missing children reported to law enforcement in Pakistan was only a
+fraction of the estimated number of children who go missing each year. The study estimated
+that 18,000 children go missing in Pakistan every year, while only around 2,000 cases are
+reported to law enforcement. The two main causes of this underreporting is lack of trust of the people in the justice system and the law enforcement. Furthermore, there is also a social
+stigma in case the child is suspected of running away.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Our Solution
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Our web application seeks to find a solution for these problems and empower the parents and
+others in the society to track down and save the children that go missing each year; anyone can
+be a volunteer and ensure that the lack of resources of law enforcement is not a problem. With
+our web application we want to make it easy to report any cases and ensure their privacy at the
+same time so parents don't have to worry about the social stigma that may come from their
+children running away.
 
-## Learning Laravel
+## The Web App
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Signin page:
+![image](https://github.com/huzaifa-jawad367/web_project/assets/103884662/00c4d9d7-a5de-4a8e-8a75-9e05f8c08e51)
+* Registeration page:
+![image](https://github.com/huzaifa-jawad367/web_project/assets/103884662/f467e808-fc0d-4c2a-a805-128839520bb1)
+* Home page:
+![image](https://github.com/huzaifa-jawad367/web_project/assets/103884662/b892fa64-aa2f-4312-9be2-ba20d1a9dcbd)
+* Form to report a lost child:
+![image](https://github.com/huzaifa-jawad367/web_project/assets/103884662/a1345362-ae46-4356-8a28-12594e83a7d8)
+* Form to report found child:
+![image](https://github.com/huzaifa-jawad367/web_project/assets/103884662/7256ea30-9c4a-4466-8baa-da755f873bd0)
+* Facial recognition for helping match missing children to found children using images:
+![image](https://github.com/huzaifa-jawad367/web_project/assets/103884662/7a0d0535-2b77-4068-87fc-cb3900274c09)
+* Search functionality:
+Search for specific children based on different criteria
+* Matching Algorithm:
+Compare the similarity between 2 different records. We use L2 distance for it
+![image](https://github.com/huzaifa-jawad367/web_project/assets/103884662/6f7289a4-003d-4b72-b450-fe7ac27be700)
