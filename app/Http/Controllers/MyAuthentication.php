@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Hash;
+use Session;
 
 class MyAuthentication extends Controller
 {
@@ -28,7 +30,7 @@ class MyAuthentication extends Controller
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->cnic = $request->cnic;
         $user->date_of_birth = $request->date_of_birth;
         $user->gender = $request->gender;
@@ -40,4 +42,30 @@ class MyAuthentication extends Controller
             return back()->with('fail', 'Something went wrong');            
         }
     }
+
+    public function login_user(Request $request) {
+        // return $request;
+        $request->validate([
+            'email'=>'required|email',
+            'password'=>'required',
+        ]);
+
+        $user = User::where('email', '=', $request->email)->first();
+        
+        if ($user) {
+            if (Hash::check($request->password, $user->password)) {
+                $request->session()->put('loginId', $user->id);
+                return redirect('dashboard');
+            } else {
+                return back()->with('fail', 'The password is not correct.');
+            }
+        } else {
+            return back()->with('fail', 'This email is not registered.');
+        }
+    }
+
+    public function dashboard() {
+        return "Welcome to your dashboard!";
+    }
+
 }

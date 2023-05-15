@@ -44,10 +44,13 @@ Route::get('/registeration', [MyAuthentication::class, 'registeration']);
 
 Route::post('/register-user', [MyAuthentication::class, 'registerUser'])->name('register-user');
 
-Route::get('/signup', function() {
-    return view('signup');
-});
+// Route::get('/signup', function() {
+//     return view('signup');
+// });
 
 Route::get('/submitted', function() {
     return view('submitted');
 });
+
+Route::post('/signin-user', [MyAuthentication::class, 'login_user'])->name('signin-user');
+Route::any('/dashboard', [MyAuthentication::class, 'dashboard']);
