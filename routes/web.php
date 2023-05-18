@@ -52,9 +52,9 @@ Route::post('/register-user', [MyAuthentication::class, 'registerUser'])->name('
 Route::get('/submitted', function() {
     return view('submitted');
 });
-
+// Route::get('/dashboard',[dashboard::class, 'index'])->middleware('isLoggedIn');
 Route::post('/signin-user', [MyAuthentication::class, 'login_user'])->name('signin-user');
 Route::get('/dashboard', [MyAuthentication::class, 'dashboard'])->middleware('isLoggedIn');
-Route::get('/dashboard',[dashboard::class, 'index'])->middleware('isLoggedIn');
+
 
 Route::get('/logout', [MyAuthentication::class, 'logout']);

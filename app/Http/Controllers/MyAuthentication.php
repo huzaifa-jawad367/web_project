@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Hash;
 use Session;
+use App\Models\Reportmodel;
+use App\Models\Missingmodel;
 
 class MyAuthentication extends Controller
 {
@@ -65,11 +67,26 @@ class MyAuthentication extends Controller
     }
 
     public function dashboard() {
+        $found = Reportmodel::all();
+        $missing = Missingmodel::all();
         $data = array();
         if (Session::has('loginId')) {
             $data = User::where('id', '=', Session::get('loginId'))->first();
+            $data2 = compact('found','missing', 'data');
         }
-        return view('dashboard', compact('data'));
+        return view('dashboard')->with($data2);
+    }
+
+    public function index(){
+
+        $found = Reportmodel::all();
+        $missing = Missingmodel::all();
+
+
+
+        $data2 = compact('found','missing'); 
+        return view('dashboard')->with($data2);
+        
     }
 
     public function logout() {

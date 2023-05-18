@@ -15,8 +15,8 @@ class dashboard extends Controller
 
 
 
-        $data = compact('found','missing'); 
-        return view('dashboard')->with($data);
+        $data2 = compact('found','missing'); 
+        return view('dashboard')->with($data2);
         
     }
 }
