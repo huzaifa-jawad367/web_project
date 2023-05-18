@@ -9,6 +9,7 @@ use App\Http\Controllers\profilef;
 use App\Http\Controllers\profilel;
 use App\Http\Controllers\home;
 use App\Http\Controllers\MyAuthentication;
+use App\Http\Controllers\dashboard;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,5 +55,6 @@ Route::get('/submitted', function() {
 
 Route::post('/signin-user', [MyAuthentication::class, 'login_user'])->name('signin-user');
 Route::get('/dashboard', [MyAuthentication::class, 'dashboard'])->middleware('isLoggedIn');
+Route::get('/dashboard',[dashboard::class, 'index'])->middleware('isLoggedIn');
 
 Route::get('/logout', [MyAuthentication::class, 'logout']);

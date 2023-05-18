@@ -19,7 +19,7 @@ class report extends Controller
 
      'name'=>'required',
      'age'=>'required|max:200',
-     'gender'=>'required|in:male,female,other',
+     'gender'=>'required',
      'dateofbirth'=>'required|date',
      'address'=>'required',
      'address_found'=>'required',
@@ -49,9 +49,6 @@ class report extends Controller
 //    Get the uploaded data id
    $id = $report->report_id;
    $report = null;
- 
-  
-
 
 
 // // Store the file with a custom name

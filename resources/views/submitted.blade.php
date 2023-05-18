@@ -20,7 +20,7 @@
 <div height=500px class="container-fluid  mt-5 pt-5 text-center">
 <div class="mt-5 pt-5"></div>
 <h2 class="text-success mt-5">Form Submitted Succesfully</h2>
-<a href="{{url('/')}}" class="button">Go to Homepage</a>
+<a href="/dashboard" class="button">Go to Homepage</a>
 
 
 <div class="mt-5 pt-5"></div>

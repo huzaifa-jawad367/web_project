@@ -17,7 +17,7 @@ class child extends Controller
      'missingtype'=>'required',  
      'name'=>'required',
      'age'=>'required|max:200',
-     'gender'=>'required|in:male,female,other',
+     'gender'=>'required|in:M,F,O',
      'dateofbirth'=>'required|date',
      'birth_address'=>'required',
      'missing_address'=>'required',

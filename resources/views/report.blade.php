@@ -45,9 +45,9 @@
         <label for="gender">Gender</label>
         <select class="form-control" id="gender" name="gender" required>
             <option value="">--Select Gender--</option>
-            <option value="male" {{ old('gender') == 'male' ? 'selected' : '' }}>Male</option>
-            <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
-            <option value="other" {{ old('gender') == 'other' ? 'selected' : '' }}>Other</option>
+            <option value="M" {{ old('gender') == 'M' ? 'selected' : '' }}>Male</option>
+            <option value="F" {{ old('gender') == 'F' ? 'selected' : '' }}>Female</option>
+            <option value="O" {{ old('gender') == 'O' ? 'selected' : '' }}>Other</option>
         </select>
         @error('gender')
             <span class="text-danger">{{ $message }}</span>
