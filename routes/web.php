@@ -22,15 +22,15 @@ use App\Http\Controllers\MyAuthentication;
 
 Route::get('/',[home::class,'index'] );
 
-Route::get('/registerv', [volunteer::class,'index']);
-Route::post('/registerv', [volunteer::class,'register']);
+Route::get('/registerv', [volunteer::class,'index'])->middleware('isLoggedIn');
+Route::post('/registerv', [volunteer::class,'register'])->middleware('isLoggedIn');
 
 
-Route::get('/registerc', [child::class,'index']);
-Route::post('/registerc', [child::class,'register']);
+Route::get('/registerc', [child::class,'index'])->middleware('isLoggedIn');
+Route::post('/registerc', [child::class,'register'])->middleware('isLoggedIn');
 
-Route::get('/report', [report::class,'index']);
-Route::post('/report', [report::class,'register']);
+Route::get('/report', [report::class,'index'])->middleware('isLoggedIn');
+Route::post('/report', [report::class,'register'])->middleware('isLoggedIn');
 
 
 Route::get('/search', [search::class,'index']);
@@ -39,8 +39,8 @@ Route::get('/profilef', [profilef::class,'index']);
 
 Route::get('/profilel', [profilel::class,'index']);
 
-Route::get('/login', [MyAuthentication::class, 'login']);
-Route::get('/registeration', [MyAuthentication::class, 'registeration']);
+Route::get('/login', [MyAuthentication::class, 'login'])->middleware('alreadyLoggedIn');
+Route::get('/registeration', [MyAuthentication::class, 'registeration'])->middleware('alreadyLoggedIn');
 
 Route::post('/register-user', [MyAuthentication::class, 'registerUser'])->name('register-user');
 
@@ -53,4 +53,6 @@ Route::get('/submitted', function() {
 });
 
 Route::post('/signin-user', [MyAuthentication::class, 'login_user'])->name('signin-user');
-Route::any('/dashboard', [MyAuthentication::class, 'dashboard']);
+Route::get('/dashboard', [MyAuthentication::class, 'dashboard'])->middleware('isLoggedIn');
+
+Route::get('/logout', [MyAuthentication::class, 'logout']);

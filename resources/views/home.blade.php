@@ -19,7 +19,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link text-light mr-3" href="{{url('/')}}/login">Log in</a>
-        </li>
+        </li>            
         <li class="nav-item">
             <a class="nav-link text-light mr-3" href="{{url('/')}}/registerc">Report Lost Child</a>
           </li>
